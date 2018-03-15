@@ -1,0 +1,16 @@
+
+ext.moduleName = 'Jodd Lagarto'
+ext.moduleDescription = 'Jodd Lagarto is fast and versatile all purpose HTML parser. Includes Jerry and CSSelly.'
+
+dependencies {
+	compile project(':jodd-core')
+	compile project(':jodd-log')
+
+	compile project(':jodd-servlet'), optional
+	provided lib.servlet, optional
+	provided lib.jsp, optional
+
+	testCompile lib.junit5
+	testCompile lib.tomcat_embed
+	testCompile project(':jodd-http')
+}

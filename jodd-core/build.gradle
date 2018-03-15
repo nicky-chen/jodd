@@ -1,0 +1,18 @@
+
+ext.moduleName = 'Jodd Core'
+ext.moduleDescription = 'Jodd Core tools and huge number of utilities.'
+
+dependencies {
+	testCompile lib.junit5
+	testCompile lib.junit5_params
+	testCompile 'org.webjars:jquery:2.1.1'
+	testCompile 'org.apache.commons:commons-lang3:3.6'
+	testCompile 'commons-codec:commons-codec:1.11'
+}
+
+jar {
+	manifest {
+		instruction 'Import-Package', '*;resolution:=optional'
+		instruction 'Multi-Release', 'true'
+	}
+}
